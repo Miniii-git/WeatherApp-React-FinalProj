@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Search location="New York" />
+        <Search DefaultCity="Como" />
       </div>
     </div>
   );

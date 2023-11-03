@@ -1,47 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Search.css";
+import axios from "axios";
+import ShowWeather from "./ShowWeather";
 
 export default function Search(props) {
-  return (
-    <div className="Search">
-      <form>
-        <div className="row">
-          <div className="col-8">
-            <input
-              type="search"
-              placeholder="Enter a City"
-              className="form-control"
-            />
-          </div>
-          <div className="col-4">
-            <input className="btn btn-light" type="submit" value="Search" />
-          </div>
+  let [city, setCity] = useState(props.DefaultCity);
+  let [data, setData] = useState(null);
+  let [ready, setReady] = useState(false);
+  let apiKey = "t734d4903fba534f1644oba02ab79462";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+
+  function handleTypingCity(event) {
+    event.preventDefault();
+    setCity(event.target.value);
+  }
+
+  function handleSubmitForm(event) {
+    event.preventDefault();
+    axios.get(apiUrl).then(getData);
+  }
+
+  function getData(response) {
+    console.log(response);
+    setData(response.data);
+    setReady(true);
+  }
+
+  let form = (
+    <form onSubmit={handleSubmitForm}>
+      <div className="row">
+        <div className="col-7">
+          <input
+            type="search"
+            placeholder="Enter a City"
+            className="form-control"
+            onChange={handleTypingCity}
+          />
         </div>
-      </form>
-      <div className="p-1">
-        <ul className="city-date-des">
-          <li id="city">Lisbon</li>
-          <li>Sunday</li>
-          <li>clear sky</li>
-        </ul>
-        <div className="row">
-          <div className="col-7">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/fog.png"
-              alt="w"
-            />
-            <span className="temperatire">17</span>
-            <span className="degree">°C</span>
-          </div>
-          <div className="col-5 weather-info">
-            <ul>
-              <li>Precipitation: 61% </li>
-              <li>Humidity: 56%</li>
-              <li>Wind: 0 km/h</li>
-            </ul>
-          </div>
+        <div className="col-5">
+          <input className="btn btn-light" type="submit" value="Search" />
         </div>
       </div>
-    </div>
+    </form>
   );
+
+  if (ready) {
+    return (
+      <div className="Search">
+        {form}
+        <ShowWeather data={data} />
+      </div>
+    );
+  } else {
+    axios.get(apiUrl).then(getData);
+  }
 }
