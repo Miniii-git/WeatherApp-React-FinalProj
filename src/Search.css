@@ -1,0 +1,62 @@
+.Search {
+  padding: 20px;
+}
+
+.Search ul {
+  list-style-type: none;
+}
+
+.Search li {
+  margin-left: -25px;
+}
+
+.Search .btn {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.Search .weather-info li {
+  color: #70757a;
+  font-size: 14px;
+  line-height: 16px;
+  padding-left: 9px;
+  padding-top: 6px;
+}
+
+.Search .date-description {
+  margin: 0;
+}
+
+.Search .city-date-des {
+  font-size: 16px;
+  line-height: 1.3;
+  margin-top: 10px;
+  color: #3c3f42;
+}
+
+.Search #city {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3c3f42;
+}
+
+.Search .temperatire {
+  font-family: Google Sans, arial, sans-serif;
+  font-weight: 400;
+  color: #242628;
+  font-size: 48px;
+}
+
+.Search .degree {
+  position: relative;
+  top: -25px;
+  margin-left: 5px;
+}
+
+.Search img {
+  float: left;
+  margin-right: 10px;
+  width: 65px;
+  position: relative;
+  top: 5px;
+}
