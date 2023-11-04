@@ -1,5 +1,6 @@
 import React from "react";
 import ChangeTemperatureUnit from "./ChangeTemperatureUnit";
+import FriendlyDate from "./FriendlyDate";
 
 let a = 0;
 export default function ShowWeather(props) {
@@ -11,8 +12,12 @@ export default function ShowWeather(props) {
       <div className="p-1">
         <ul className="city-date-des">
           <li id="city">{props.data.city}</li>
-          <li>sunday</li>
-          <li>{props.data.condition.description}</li>
+          <li>
+            <FriendlyDate time={props.data.time} />
+          </li>
+          <li className="text-capitalize">
+            {props.data.condition.description}
+          </li>
         </ul>
         <div className="row">
           <div className="col-7">
