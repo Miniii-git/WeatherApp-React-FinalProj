@@ -23,7 +23,7 @@ export default function ChangeTemperatureUnit(props) {
         </a>
         <span>|</span>
         <a href="/" onClick={ChangeUnitToFahrenheit}>
-          {" "}
+          {""}
           °F
         </a>
       </div>

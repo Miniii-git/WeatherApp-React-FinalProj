@@ -29,7 +29,7 @@ export default function Search(props) {
   let form = (
     <form onSubmit={handleSubmitForm}>
       <div className="row">
-        <div className="col-7">
+        <div className="col-9">
           <input
             type="search"
             placeholder="Enter a City"
@@ -37,7 +37,7 @@ export default function Search(props) {
             onChange={handleTypingCity}
           />
         </div>
-        <div className="col-5">
+        <div className="col-3">
           <input className="btn btn-light" type="submit" value="Search" />
         </div>
       </div>

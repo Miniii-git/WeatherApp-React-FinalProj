@@ -1,6 +1,7 @@
 import React from "react";
 import ChangeTemperatureUnit from "./ChangeTemperatureUnit";
 import FriendlyDate from "./FriendlyDate";
+import Icons from "./Icons";
 
 let a = 0;
 export default function ShowWeather(props) {
@@ -21,10 +22,7 @@ export default function ShowWeather(props) {
         </ul>
         <div className="row">
           <div className="col-7">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/fog.png"
-              alt="w"
-            />
+            <Icons url={props.data.condition.icon_url} />
             <ChangeTemperatureUnit celcius={props.data.temperature.current} />
           </div>
           <div className="col-5 weather-info">
