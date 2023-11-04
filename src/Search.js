@@ -48,7 +48,7 @@ export default function Search(props) {
     return (
       <div className="Search">
         {form}
-        <ShowWeather data={data} />
+        <ShowWeather data={data} location={city} />
       </div>
     );
   } else {
