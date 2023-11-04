@@ -1,7 +1,9 @@
 import React from "react";
-
+let a = 0;
 export default function ShowWeather(props) {
   console.log(props.data);
+  a = a + 1;
+  console.log(a);
   return (
     <div className="ShowWeather">
       <div className="p-1">

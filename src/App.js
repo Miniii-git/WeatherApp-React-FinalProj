@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Search DefaultCity="Como" />
+        <Search DefaultCity="como" />
       </div>
     </div>
   );
