@@ -1,0 +1,23 @@
+.ChangeTemperatureUnit .temperatire {
+  font-family: Google Sans, arial, sans-serif;
+  font-weight: 400;
+  color: #242628;
+  font-size: 48px;
+}
+
+.ChangeTemperatureUnit .degree {
+  display: inline;
+  position: relative;
+  top: -25px;
+  margin-left: 2px;
+}
+
+.ChangeTemperatureUnit .degree a {
+  text-decoration: none;
+  color: #9aa0a6;
+}
+
+.ChangeTemperatureUnit .degree a:active {
+  text-decoration: none;
+  color: #2f3032;
+}

@@ -1,4 +1,6 @@
 import React from "react";
+import ChangeTemperatureUnit from "./ChangeTemperatureUnit";
+
 let a = 0;
 export default function ShowWeather(props) {
   console.log(props.data);
@@ -18,10 +20,7 @@ export default function ShowWeather(props) {
               src="https://ssl.gstatic.com/onebox/weather/64/fog.png"
               alt="w"
             />
-            <span className="temperatire">
-              {Math.round(props.data.temperature.current)}
-            </span>
-            <span className="degree">°C</span>
+            <ChangeTemperatureUnit celcius={props.data.temperature.current} />
           </div>
           <div className="col-5 weather-info">
             <ul>

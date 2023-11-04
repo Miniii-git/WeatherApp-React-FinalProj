@@ -40,19 +40,6 @@
   color: #3c3f42;
 }
 
-.Search .temperatire {
-  font-family: Google Sans, arial, sans-serif;
-  font-weight: 400;
-  color: #242628;
-  font-size: 48px;
-}
-
-.Search .degree {
-  position: relative;
-  top: -25px;
-  margin-left: 5px;
-}
-
 .Search img {
   float: left;
   margin-right: 10px;
