@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ChangeTemperatureUnit.css";
 
 export default function ChangeTemperatureUnit(props) {
   let [temp, setTemp] = useState(props.celcius);
+
+  useEffect(() => {
+    setTemp(props.celcius);
+  }, [props.celcius]);
 
   function ChangeUnitToCelcius(event) {
     event.preventDefault();
