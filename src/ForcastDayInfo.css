@@ -1,0 +1,10 @@
+.ForcastDayInfo {
+  color: 3c3f42;
+  font-size: 14px;
+}
+
+.ForcastDayInfo .min-max {
+  color: 3c3f42;
+  font-size: 12px;
+  margin-top: 5px;
+}

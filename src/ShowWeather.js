@@ -6,8 +6,6 @@ import "./ShowWeather.css";
 
 let a = 0;
 export default function ShowWeather(props) {
-  console.log(props.data);
-
   a = a + 1;
   console.log(a);
 
@@ -26,7 +24,7 @@ export default function ShowWeather(props) {
           </ul>
           <div className="row">
             <div className="col-7">
-              <Icons url={props.data.condition.icon_url} />
+              <Icons url={props.data.condition.icon_url} size={80} />
               <ChangeTemperatureUnit celcius={props.data.temperature.current} />
             </div>
             <div className="col-5 weather-info">
