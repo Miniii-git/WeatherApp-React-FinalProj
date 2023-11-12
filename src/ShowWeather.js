@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ChangeTemperatureUnit from "./ChangeTemperatureUnit";
 import FriendlyDate from "./FriendlyDate";
 import Icons from "./Icons";
 import "./ShowWeather.css";
+import ShowForcast from "./ShowForcast";
 
 let a = 0;
 export default function ShowWeather(props) {
@@ -35,6 +36,7 @@ export default function ShowWeather(props) {
             </div>
           </div>
         </div>
+        <ShowForcast data={props.data} />
       </div>
     );
   } else {
