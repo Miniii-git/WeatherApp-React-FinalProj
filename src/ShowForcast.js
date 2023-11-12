@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import Icons from "./Icons";
 import "./ShowForcast.css";
 import ForcastDaysInfo from "./ForcastDaysInfo";
 

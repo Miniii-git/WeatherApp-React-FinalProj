@@ -10,7 +10,7 @@ export default function ForcastDaysInfo(props) {
           return (
             <div className="col">
               <Day time={day.time} />
-              <img src={day.condition.icon_url} width={55} />
+              <img src={day.condition.icon_url} width={55} alt="0" />
               <div className="min-max">
                 <span className="min">
                   {Math.round(day.temperature.minimum)}°{" "}
@@ -22,6 +22,8 @@ export default function ForcastDaysInfo(props) {
               </div>
             </div>
           );
+        } else {
+          return null;
         }
       })}
     </div>
